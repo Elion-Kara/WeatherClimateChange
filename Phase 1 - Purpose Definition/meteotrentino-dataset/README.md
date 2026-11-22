@@ -43,7 +43,7 @@ On macOS, use `shasum -a 256 -c SHA256SUMS` for the checksum step. The script ca
 python reproduce.py --raw-dir path/to/cache --output-dir path/to/output
 ```
 
-For just the original files listed in the manifest, run `python reproduce.py --download-only`. That option uses only Python's standard library. The original Parquet files contain the full archived time span. The CSVs are the study-period extracts. If a versioned URL is retired, an exact rebuild requires a copy of the corresponding Parquet file with the manifest's checksum.
+The original Parquet files contain the full archived time span. The CSVs are the study-period extracts. If a versioned URL is retired, an exact rebuild requires a copy of the corresponding Parquet file with the manifest's checksum.
 
 ## Timing and quality
 

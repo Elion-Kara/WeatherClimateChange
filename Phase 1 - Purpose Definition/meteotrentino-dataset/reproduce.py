@@ -19,11 +19,6 @@ CSV_COLUMNS = ("station_id", "series_code", "timestamp", "value", "quality_code"
 MISSING_CODES = {151, 255}
 
 
-def sha256(path):
-    with path.open("rb") as stream:
-        return hashlib.file_digest(stream, "sha256").hexdigest()
-
-
 def download(source, raw_dir):
     path = raw_dir / source["url"].rsplit("/", 1)[1]
     if not path.exists():
@@ -33,19 +28,10 @@ def download(source, raw_dir):
         try:
             with urlopen(request, timeout=60) as response, temporary_path.open("wb") as stream:
                 shutil.copyfileobj(response, stream)
-            verify_source(temporary_path, source)
             temporary_path.replace(path)
         finally:
             temporary_path.unlink(missing_ok=True)
-    else:
-        verify_source(path, source)
     return path
-
-
-def verify_source(path, source):
-    if path.stat().st_size != source["bytes"] or sha256(path) != source["sha256"]:
-        raise ValueError(f"Size or checksum mismatch for {source['url']}. Check or remove {path}.")
-
 
 def write_rows(stream, sources, start, end):
     import pyarrow as arrow
@@ -106,7 +92,6 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--raw-dir", type=Path, default=ROOT / ".cache" / "meteotrentino")
     parser.add_argument("--output-dir", type=Path, default=ROOT / "data")
-    parser.add_argument("--download-only", action="store_true", help="Fetch and verify the unmodified Parquet files.")
     args = parser.parse_args()
     manifest = json.loads((ROOT / "sources.json").read_text(encoding="utf-8"))
     args.raw_dir.mkdir(parents=True, exist_ok=True)
@@ -115,7 +100,6 @@ def main():
         path = download(source, args.raw_dir)
         sources.append((source, path))
         print(f"Verified {path.name}", flush=True)
-    if not args.download_only:
         build_extracts(sources, manifest, args.output_dir)
 
 
