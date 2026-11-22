@@ -1,0 +1,144 @@
+{
+  "provider": "Provincia Autonoma di Trento – Meteotrentino, Archivio Dati",
+  "archive": "https://archivio.meteotrentino.it/share/",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "retrieved_on": "2026-11-22",
+  "study_start": "2017-01-02T00:00:00+01:00",
+  "study_end_exclusive": "2026-01-01T00:00:00+01:00",
+  "stations": {
+    "T0129": {
+      "name": "Trento (Laste)",
+      "elevation_m": 312,
+      "latitude": 46.0718,
+      "longitude": 11.1357
+    },
+    "T0135": {
+      "name": "Trento (Roncafort)",
+      "elevation_m": 194,
+      "latitude": 46.0956,
+      "longitude": 11.1014
+    }
+  },
+  "quality_codes": {
+    "1": "Valid (manually validated)",
+    "2": "Good, edited",
+    "3": "Good, merged from several series",
+    "5": "AI reconstructed (missing value)",
+    "6": "Possible anomaly flagged by AI (measured value kept)",
+    "7": "AI-checked, plausible",
+    "8": "AI-corrected (replaces a value flagged 6)",
+    "70": "Estimated (Hydrological Yearbook)",
+    "76": "Interpolated (Hydrological Yearbook)",
+    "80": "Accumulation start (Yearbook)",
+    "81": "Accumulation continues (Yearbook)",
+    "82": "Accumulation end: period total (Yearbook)",
+    "85": "Snow",
+    "90": "Delayed snow melt",
+    "140": "Uncertain (neighbour comparison or station malfunction)",
+    "145": "Telemetry, not yet validated",
+    "151": "Missing",
+    "255": "Missing, station off"
+  },
+  "files": [
+    {
+      "station_id": "T0129",
+      "series_code": "10.00",
+      "resolution": "subdaily",
+      "quantity": "Precipitation total over the preceding 5 minutes",
+      "unit": "mm",
+      "url": "https://archivio.meteotrentino.it/share/data/T0129/T0129_10.00.v20261106T1358.parquet",
+      "bytes": 14748401,
+      "sha256": "521618b6b8299e2e6f59074bb2f6b5af19dc55ee71d081bbfda043396ec603de"
+    },
+    {
+      "station_id": "T0129",
+      "series_code": "10.50",
+      "resolution": "daily",
+      "quantity": "Hydrological Yearbook daily precipitation total, 09:00 to 09:00",
+      "unit": "mm",
+      "url": "https://archivio.meteotrentino.it/share/data/T0129/T0129_10.50.v20261106T1358.parquet",
+      "bytes": 394666,
+      "sha256": "615fcbd413886b0b45aa2af38aef863d02e5386a87ec43315f1f8825dbdcfe5d"
+    },
+    {
+      "station_id": "T0129",
+      "series_code": "400.00",
+      "resolution": "subdaily",
+      "quantity": "Instantaneous air temperature",
+      "unit": "degC",
+      "url": "https://archivio.meteotrentino.it/share/data/T0129/T0129_400.00.v20261106T1358.parquet",
+      "bytes": 7088751,
+      "sha256": "48fd444f3a99efe3c295bbeed642d4e582343cd39bf6069ca55af10debf95c62"
+    },
+    {
+      "station_id": "T0129",
+      "series_code": "400.55",
+      "resolution": "daily",
+      "quantity": "Hydrological Yearbook daily minimum air temperature",
+      "unit": "degC",
+      "url": "https://archivio.meteotrentino.it/share/data/T0129/T0129_400.55.v20261106T1358.parquet",
+      "bytes": 423140,
+      "sha256": "a3963442470e18303ddc688c527afb5a7926c4273069dc5f4e6acaea4286b9c8"
+    },
+    {
+      "station_id": "T0129",
+      "series_code": "400.56",
+      "resolution": "daily",
+      "quantity": "Hydrological Yearbook daily maximum air temperature",
+      "unit": "degC",
+      "url": "https://archivio.meteotrentino.it/share/data/T0129/T0129_400.56.v20261106T1358.parquet",
+      "bytes": 431827,
+      "sha256": "8176b2636e51d92e07726bc8375773dd35648e866de07d518dfc4258644c37d2"
+    },
+    {
+      "station_id": "T0135",
+      "series_code": "10.00",
+      "resolution": "subdaily",
+      "quantity": "Precipitation total over the preceding 5 minutes",
+      "unit": "mm",
+      "url": "https://archivio.meteotrentino.it/share/data/T0135/T0135_10.00.v20261106T1358.parquet",
+      "bytes": 14789610,
+      "sha256": "e40d776177d3e4113b8b3c76c3ffbab8d2d1b666ce04833bd5094eb0db84d2e4"
+    },
+    {
+      "station_id": "T0135",
+      "series_code": "10.50",
+      "resolution": "daily",
+      "quantity": "Hydrological Yearbook daily precipitation total, 09:00 to 09:00",
+      "unit": "mm",
+      "url": "https://archivio.meteotrentino.it/share/data/T0135/T0135_10.50.v20261106T1358.parquet",
+      "bytes": 190898,
+      "sha256": "604f6d41ae7cf6c92a87d5ba4cd0e91e474adb555d062950ab567ca3dbc60e50"
+    },
+    {
+      "station_id": "T0135",
+      "series_code": "400.00",
+      "resolution": "subdaily",
+      "quantity": "Instantaneous air temperature",
+      "unit": "degC",
+      "url": "https://archivio.meteotrentino.it/share/data/T0135/T0135_400.00.v20261106T1358.parquet",
+      "bytes": 6302987,
+      "sha256": "a448247571f4b97ffe4cc45a1f340b9a85b5efe12a13fc9e4487b2e68c95d845"
+    },
+    {
+      "station_id": "T0135",
+      "series_code": "400.55",
+      "resolution": "daily",
+      "quantity": "Hydrological Yearbook daily minimum air temperature",
+      "unit": "degC",
+      "url": "https://archivio.meteotrentino.it/share/data/T0135/T0135_400.55.v20261106T1358.parquet",
+      "bytes": 197879,
+      "sha256": "996191ad8b0002ea5f50f85b1aca372bfdddbf1ace0cb5cfca04b6da0697309b"
+    },
+    {
+      "station_id": "T0135",
+      "series_code": "400.56",
+      "resolution": "daily",
+      "quantity": "Hydrological Yearbook daily maximum air temperature",
+      "unit": "degC",
+      "url": "https://archivio.meteotrentino.it/share/data/T0135/T0135_400.56.v20261106T1358.parquet",
+      "bytes": 200247,
+      "sha256": "b6b94ded049433248912f6e7d2e3312c58b7f551dc047cf0cdc6933f75bad7b1"
+    }
+  ]
+}
